@@ -291,14 +291,10 @@ $().ready(function (e) {
                 var text = matchText(elem.chracterset);
                 var matchinfo = "<input type='text' id='" + idx + "' idx='" + idx + "' class='matchinfo' value='" + elem.chracterset + "'>"
                 $('#divMatch').append(matchinfo);
-
                 elem.fontsize = elem.fontsize * ratio
-
-
                 var div = "<div id='" + elem.id + "' class='item'  style='top: " + y + "px; left: " + x + "px;    position:absolute; width:" + w + "px;  height:" + h + "px;'><div class='text'>" + text + "</div></div>";
-
+                
                 $('#' + elem.pid).append(div);
-
                 $('#' + elem.id).css('background-color', elem.bgcolor);
                 $('#' + elem.id).children(".ui-resizable-handle").removeClass('resizabled');
                 $('#' + elem.id).children(".ui-resizable-handle").css('display', 'none');
@@ -338,8 +334,8 @@ $().ready(function (e) {
                 });
             }
         });
-
     }
+
     if ($("#ETCs").text() != "") {
         etcs = JSON.parse($("#ETCs").text());
         etcs.forEach(function (elem) {
@@ -371,7 +367,7 @@ $().ready(function (e) {
     }
 
 
-    Kakao.init('94a08cfa99972d4a71c99401069b1311    1111111111111111111111111111111111');
+    Kakao.init('4d7c239dbb73f9e96d04edc2385c924b');
     // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
     Kakao.Link.createDefaultButton({
         container: '#kakao-link-btn', // 버튼 id
