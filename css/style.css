@@ -306,7 +306,7 @@ body {
     display: inline-block;
     width: 60px;
     height: 65px;
-    background: url(./img/kakaopay.jpg) no-repeat 0 0;
+    background: url(../img/kakaopay.jpg) no-repeat 0 0;
     background-size: 40px;
     vertical-align: top;
     margin-right: 20px;
@@ -331,16 +331,16 @@ body {
     margin-top:-4px;
 }
 .remittance .btn_wrap .an_btn.groom i {
-    background: url(./img/groom.png) no-repeat 24px #ebebeb;
+    background: url(../img/groom.png) no-repeat 24px #ebebeb;
     background-size: 21px;
 }
 .remittance .btn_wrap .an_btn.bride i {
-    background: url(./img/bride.png) no-repeat 24px #ebebeb;
+    background: url(../img/bride.png) no-repeat 24px #ebebeb;
     background-size: 22px;
 }
 .remittance .btn_wrap .an_btn.account i {
     width:50px;
-    background: url(./img/pay_icon.svg) no-repeat 8px #ebebeb;
+    background: url(../img/pay_icon.svg) no-repeat 8px #ebebeb;
     background-size: 26px;
     margin-right: 0;
 }
