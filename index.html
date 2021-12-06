@@ -1094,29 +1094,38 @@
         }
     
         Kakao.init('4d7c239dbb73f9e96d04edc2385c924b');
-        // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-        Kakao.Link.createDefaultButton({
-            container: '#kakao-link-btn', // 버튼 id
-            objectType: 'location', // 카카오톡 링크 타입
+        function sendLinkKakao(){
+            Kakao.Link.sendDefault({
+            objectType: 'feed',
             content: {
-                title: _title, // 타이틀
-                //description: _desc + "\n모바일청첩장", // 상세정보
-                description: _wedddate + _desc,
-                imageUrl: _image, // 이미지
+                title: '{{ post.title }}',
+                description: '{{ post.content|bs4process|truncatewords:15 }}',
+                imageUrl: '{{ post.content|bs4imagepath|full_url }}',
                 link: {
-                    mobileWebUrl: _url,
-                    webUrl: _url
-                },
-                imageWidth: parseInt(_imgWidth == null ? 0 : _imgWidth), // 이미지가로
-                imageHeight: parseInt(_imgHeight == null ? 0 : _imgWidth)// 이미지 세로
+                mobileWebUrl: '{{ request.build_absolute_uri }}',
+                webUrl: '{{ request.build_absolute_uri }}'
+                }
             },
-            address: $("#addressDetail").text()
-        });
-    </script>
+            buttons: [       
+                {
+                title: '링크 열기',
+                link: {
+                    mobileWebUrl: '{{ request.build_absolute_uri }}',
+                    webUrl: '{{ request.build_absolute_uri }}'
+                }
+                }
+            ]
+            }); 
+        }
+        </script>
 </head>
 <body>
     <div id="wrap">
-
+        <span class="sociallink ml-1">
+            <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유">
+                <img src="./img/kakao_icon.png" width=36 alt="Kakaotalk">
+            </a>
+        </span>
         <!-- 결혼합니다 -->
         <div>
             <!-- 표지 디자인 (메인 디자인) -->
