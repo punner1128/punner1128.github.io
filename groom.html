@@ -126,11 +126,6 @@
             margin-right: 1% !important;
         }
 
-        .iframe_wrap iframe {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
         #area11 {
             height: 100%;
         }
@@ -714,20 +709,6 @@
             padding: 0 3% 10px;
         }
 
-        .iframe_wrap {
-            position: relative;
-            padding-bottom: 56.25% !important;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        /* .iframe_wrap iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-        } */
-
         /* 오시는 길 */
         .location {
         }
@@ -1016,21 +997,6 @@
 
                 //복사완료 문구
                 toast(this, '복사되었습니다.', 1500);
-            });
-
-            
-            if ($(document).width() < 500) {
-                $(".iframe_wrap iframe").css("height", "191px");
-            }
-
-            $('.an_btn.groom').on('click', function () {
-                fn_AccountClose();
-                $('.account_pop.groom').show();
-            });
-
-            $('.btn.an_btn.bride').on('click', function () {
-                fn_AccountClose();
-                $('.account_pop.bride').show();
             });
 
             $('.btn.an_btn.account').on('click', function () {
