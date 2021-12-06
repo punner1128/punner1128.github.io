@@ -1093,39 +1093,12 @@
             document.body.removeChild(aux);
         }
     
-        Kakao.init('4d7c239dbb73f9e96d04edc2385c924b');
-        function sendLinkKakao(){
-            Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-                title: '{{ post.title }}',
-                description: '{{ post.content|bs4process|truncatewords:15 }}',
-                imageUrl: '{{ post.content|bs4imagepath|full_url }}',
-                link: {
-                mobileWebUrl: '{{ request.build_absolute_uri }}',
-                webUrl: '{{ request.build_absolute_uri }}'
-                }
-            },
-            buttons: [       
-                {
-                title: '링크 열기',
-                link: {
-                    mobileWebUrl: '{{ request.build_absolute_uri }}',
-                    webUrl: '{{ request.build_absolute_uri }}'
-                }
-                }
-            ]
-            }); 
-        }
+        // Kakao.init('4d7c239dbb73f9e96d04edc2385c924b');
         </script>
 </head>
 <body>
     <div id="wrap">
-        <span class="sociallink ml-1">
-            <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유" style="background-color: yellow;">
-                <img src="./img/kakao_icon.png" width=100 height=100 alt="Kakaotalk">
-            </a>
-        </span>
+
         <!-- 결혼합니다 -->
         <div>
             <!-- 표지 디자인 (메인 디자인) -->
