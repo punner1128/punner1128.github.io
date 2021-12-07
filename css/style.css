@@ -83,6 +83,22 @@ body {
     }
 }
 
+
+.headline_title {
+    font-weight: bold;
+    font-size: 37px;
+}
+@media screen and (min-width: 600px) { 
+    .headline_title {
+        font-size: 42px;
+    }
+} 
+@media screen and (min-width: 800px) { 
+    .headline_title {
+        font-size: 47px;
+    }
+}
+
 .text {
     width: 100%;
     font-family: Nanum Myeongjo, serif;
@@ -582,7 +598,7 @@ input:focus {
 
 .call .list_wrap li {
     float: left;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -604,7 +620,7 @@ input:focus {
 }
 
 .call .list_wrap .btn_wrap a {
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .call .list_wrap span:nth-child(1) {
